@@ -1,0 +1,124 @@
+@import 'base';
+@import 'flex';
+$width-img:333px;
+$height-img:291px;
+$padding-side: 7.63vw;
+// $width-img:23.125vw;
+// $height-img:20.20833333333vw;
+$height-start: 46vw;
+
+.main{
+    background-color: $gray;
+
+}
+.start{
+    background-color: $green;
+    @include flex_row;
+    padding: 0 $padding-side;
+    height: $height-start;
+    padding-top: 13.8vw;
+}
+.start_text{
+    width: 50%;
+    padding: 11.1vw 0;
+    p{
+        padding-top: 1.3vw;
+    }
+}
+
+.start_img{
+    background: url("../image/tablets.png");
+    height: $height-img;
+    width: $width-img;
+}
+.book{
+    padding: 8.3vw 0 3.4vw;
+    @include flex_center;
+    align-items: center;
+
+}
+
+
+//input
+.container{
+
+    max-width: 83.3vw;
+    background: $green;
+    border-radius: 0.34vw;
+    width: 83.3vw;
+    padding: 1.3vw;
+    box-shadow: 0 0.13vw 0.13vw 0.2vw rgba(0,0,0,0.1);
+}
+.wrap{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2.7vw;
+    padding-bottom: 0.6vw;
+    border-bottom: 0.13vw solid $gray;
+}
+.add{
+    text-decoration: none;
+    display: inline-block;
+    width: 2.08vw;
+    height: 2.08vw;
+    background: $gray;
+    font-size: 2rem;
+    font-weight: bold;
+    color: $black;
+    @include flex_center;
+    align-items: center;
+}
+
+/* Dynamic  */
+
+.flex{
+    display: flex;
+    gap:1.5em;
+    margin-bottom: 1.04vw;
+}
+.delete{
+    text-decoration: none;
+    display: inline-block;
+    background: $gray;
+    font-size: 1.5rem;
+    font-weight: bold;
+    width: 2.08vw;
+    height: 2.08vw;
+    color:$black;
+    margin-left: auto;
+    @include flex_center;
+    align-items: center;
+    cursor: pointer;
+}
+input, select{
+    padding: 0.34vw 0.69vw;
+    background: $gray;
+    border:none;
+    width: 50%;
+    border-radius: 2.08vw;
+}
+input:focus, select:focus{
+    outline: 1px solid #efefef;
+}
+.total{
+    @include flex_row;
+    button{
+        padding:  0.34vw 0.69vw;
+        background: $gray;
+        border:none;
+        // width: 50%;
+        cursor: pointer;
+        border-radius:  0.34vw;
+    }
+}
+
+@media screen and (max-width:1000px){
+    .start_img{
+        display: none;
+    }
+    .start_text{
+        width: 100%;
+    }
+}

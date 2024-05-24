@@ -1,0 +1,41 @@
+@import 'base';
+@import 'flex';
+
+$padding-side: 7.6vw;
+$gap_menu: 4.6vw;
+$header-height: 10vw;
+// $padding-side: 110px;
+// $gap_menu: 70px;
+// $header-height: 164px;
+
+.header{
+    background-color: $gray;
+    @include flex_row;
+    padding: 0 $padding-side;
+    height: $header-height;
+    color: $black;
+    align-items: center;
+
+}
+.header-menu{
+    @include flex_row;
+    gap: $gap_menu;
+    align-items: center;
+
+}
+.header-menu{
+    li{
+        a{
+            color:$black;
+            transition: 500ms;
+        }
+    }
+}
+.header-menu{
+    li{
+        a:hover{
+            color:$green;
+            transition: 500ms;
+        }
+    }
+}

@@ -1,54 +1,50 @@
-$black: #0A0C14;
-$gray: #545465;
-$dark-gray: #2A2940;
-$pink: #FFEEF1;
-$orange: #FFA41C;
-$red: #FE0000;
-$white: #FFFFFF;
+@import 'reset';
 
-$width: 1440px;
-$header-height:740px;
-$footer-height: 786px;
-$content-height:994px;
+@import url("https://fonts.googleapis.com/css2?family=Marmelad&display=swap");
+@import "header";
+@import "content";
+@import "footer";
 
-$p-font-size:18px;
-$p-font-size-large:20px;
-$p-font-size-small:16px;
-$h1-font-size: 72px;
-$h2-font-size: 48px;
-$h3-font-size: 24px;
-
-$margin:50px;
-$margin-left:40px;
 
 html{
-    font-size: $p-font-size;
-    color:$gray;
-    background-color: $pink;
-}
-body{
-    max-width: 1440px;
-    margin:auto;
-    text-align: center;
-}
-header, main, footer{
-    border: 1px dashed $gray;
+    font-family: "Marmelad", sans-serif;
+    color: $black;
 }
 h1{
-    font-size: $h1-font-size;
-    font-weight: bold;
+    font-size: $font-size-h1;
 }
 h2{
-    font-size: $h2-font-size;
+    font-size: $font-size-h2;
 }
-header{
-    height: $header-height;
+h3, a{
+    font-size: $font-size-h3;
 }
-footer{
-    height: $footer-height;
-    background-color: $black;
-    color: $white;
+p{
+    font-size: $font-size-p;
 }
-main{
-    height: $content-height;
+@media screen and (max-width:800px){
+    $font-size-h1: 40px;
+    $font-size-h2: 30px;
+    $font-size-h3: 20px;
+    $font-size-p: 10px;
+    h1{
+        font-size: $font-size-h1;
+    }
+    h2{
+        font-size: $font-size-h2;
+    }
+    h3, a{
+        font-size: $font-size-h3;
+    }
+    p{
+        font-size: $font-size-p;
+    }
+    .header{
+
+        flex-direction: column;
+        height: 120px;
+
+    }
+
+    
 }

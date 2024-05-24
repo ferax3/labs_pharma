@@ -1,0 +1,8 @@
+@import "flex";
+$footer-height:11.4vw;
+.footer{
+    @include flex_center;
+    background-color: $green;
+    height: $footer-height;
+    align-items: center;
+}

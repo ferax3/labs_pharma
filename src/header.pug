@@ -1,2 +1,7 @@
-header
-    h1 Header
+header.header
+    div.header_logo
+        h1 PharmaVita
+    ul.header-menu
+        each name in ['Головна', 'Каталог', 'Контакти']
+            li
+                a(href="#")=name 
